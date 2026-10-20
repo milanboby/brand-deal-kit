@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://milanboby.github.io/brand-deal-kit/sitemap.xml
