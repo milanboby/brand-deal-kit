@@ -179,5 +179,5 @@ Launch offer: use code <code>LAUNCH20</code> at checkout for 20% off (new buyers
 open("index.html","w").write(page)
 open("robots.txt","w").write("User-agent: *\nAllow: /\n" + (f"Sitemap: {BASE}/sitemap.xml\n" if BASE else ""))
 if BASE:
-    open("sitemap.xml","w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>{BASE}/</loc><lastmod>2026-10-20</lastmod></url></urlset>\n')
+    open("sitemap.xml","w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>{BASE}/</loc><lastmod>{__import__("datetime").date.today().isoformat()}</lastmod></url></urlset>\n')
 print(len(page))
